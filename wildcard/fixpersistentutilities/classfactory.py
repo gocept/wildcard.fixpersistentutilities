@@ -3,6 +3,7 @@ import imp
 import sys
 import string
 import logging
+import persistent
 
 _generated_classes = {}
 _generated_modules = {}
@@ -15,7 +16,7 @@ def toggleAutoGenClasses():
     _auto_gen_enabled = not _auto_gen_enabled
 
 
-class FakeClass(object):
+class FakeClass(persistent.Persistent):
     pass
 
 
